@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diet Coke Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>🥤 Diet Coke Log</h1>
+
+    <form id="entry-form">
+      <label>When
+        <input type="datetime-local" id="consumed_at" required>
+      </label>
+      <label>Variety
+        <select id="variety" required>
+          <option>Classic</option>
+          <option>Cherry</option>
+          <option>Ginger Lime</option>
+          <option>Zero Sugar</option>
+          <option>Feisty Cherry</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Location
+        <input type="text" id="location" placeholder="Home, office, cafe...">
+      </label>
+      <label>Rating
+        <select id="rating">
+          <option value="">No rating</option>
+          <option value="1">★</option>
+          <option value="2">★★</option>
+          <option value="3">★★★</option>
+          <option value="4">★★★★</option>
+          <option value="5">★★★★★</option>
+        </select>
+      </label>
+      <label>Notes
+        <textarea id="notes" rows="2" placeholder="How was it?"></textarea>
+      </label>
+      <button type="submit">Log it</button>
+    </form>
+
+    <h2>Diary</h2>
+    <ul id="entries"></ul>
+    <h2>Cans per week</h2>
+    <ul id="weekly"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
